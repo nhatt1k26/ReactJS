@@ -2,24 +2,24 @@
 
 ### Requirement Extension for ReactJS
 
-* Auto rename Tag
-* Babel Javascript
-* Bookmarks
-* DotENV
-* ESLint
-* Javascript (ES6) code snippets
-* Prettier
-* Reactjs code snippets
-* styled-components-snippets
-* Tailwind CSS Intellisense
-* Turbo Console Log
-* Visual Studio IntelliCode
-* vscoded-styled-components
+- Auto rename Tag
+- Babel Javascript
+- Bookmarks
+- DotENV
+- ESLint
+- Javascript (ES6) code snippets
+- Prettier
+- Reactjs code snippets
+- styled-components-snippets
+- Tailwind CSS Intellisense
+- Turbo Console Log
+- Visual Studio IntelliCode
+- vscoded-styled-components
 
 ### Chrome extensions
 
-+ Redux dev tool
-+ React developes tool
+- Redux dev tool
+- React developes tool
 
 ### Toolchain - create-react-app
 
@@ -37,7 +37,7 @@ import'./App.css';
 
 functionFeature(){
 
-  return(
+return(
 
     <divclassName="App">
 
@@ -65,13 +65,13 @@ functionFeature(){
 
 </div>
 
-  )
+)
 
 }
 
 functionApp() {
 
-  return (
+return (
 
     `<div>`
 
@@ -83,7 +83,7 @@ functionApp() {
 
     `</div>`
 
-  );
+);
 
 }
 
@@ -97,12 +97,11 @@ Custom Inline: use cameoCase
 
 ## Rendering List
 
-
 functionApp() {
 
-  // console.log(YoutubeData);
+// console.log(YoutubeData);
 
-  return (
+return (
 
     <divclassName={"youtube-list"}>
 
@@ -144,7 +143,7 @@ functionApp() {
 
     `</div>`
 
-  );
+);
 
 }
 
@@ -161,3 +160,86 @@ YoutubeList>
 =>> props.children
 
 ## State - Stateless - Statefull
+
+Stateless Functional Component: Is component dont use state
+
+Stateful Functional Component: Is component dont use state
+
+## Hook usestate
+
+4 Step when use hook:
+
+- Enable State
+- Initialize State
+- Reading State
+- Update State
+
+Example: const [on,setOn] = useState(false);
+
+Re-render: when state changes, component in react is be re-render to update.
+
+## Function Handler
+
+example:
+
+consthandleToggle = () =>{
+
+    setOn((on) => !on)
+
+}
+
+<divclassName={`toggle ${on? "active" :""}`} onClick = {handleToggle}>
+
+## Regulation when use State
+
+Do not declare new state inside brach, loop, should declare at beginning of function
+
+## Tictactoe game
+
+## Implement Elaborate State
+
+const [board, setBoard] = useState(Array(9).fill(null));
+
+const [xIsNext, setXIsNext] = useState(true);
+
+=> Initialize and Declare
+
+const [state,setState] = useState(
+
+board: Array(9).fill(null),
+
+xIsNext: true,
+
+)
+
+=> Set State
+
+setState({
+
+    ... state,  ===> to Use  similar props dont set again
+
+    board : boardCopy,
+
+    xIsNext : !xIsNext,
+
+})
+
+## Use hook useReducer
+
+Use when have multiple state, many function.
+
+General Syntax:
+
+const [state,dispatch] = useReducer(reducer
+
+board: Array(9).fill(null)
+
+})
+
+## Copy array/object in javascripts
+
+coppyArray = [ ... CopyArray ]
+
+action.payload = JSON.parse(JSON.stringify(state))
+
+## Sass - install

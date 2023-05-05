@@ -1,14 +1,9 @@
 import "./App.css";
-import YoutubeList from "./components/youtube/YoutubeList";
+import Game from "./components/tictactoe/Game";
 
 function App() {
-  const name = "envdev";
   // console.log(YoutubeData);
-  return (
-    <YoutubeList>
-      {name}
-    </YoutubeList>
-  );
+  return <Game></Game>;
 }
 
 export default App;
